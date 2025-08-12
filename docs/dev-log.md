@@ -13,6 +13,19 @@
 ## Decisions Made
 - Use a log to track progress of the project
 - Use enum to represent clubs
+- No ID in shot. Currently, there is no need to access individual shots
 ## Progress
+- Created Shot class
+- Created ShotRepository interface
+- Created InMemoryShotRepository implementation
+### Tests Created
+- `ShotRepositoryContract` - documents interface promises
+- `InMemoryShotRepositoryTest` - extends contract
 ## Lessons Learned
+### Interface Testing
+- Interfaces define contracts
+- Test that the implementations have behavior
+- Use an abstract class that can be applied to any implementation
+- see `ShotRepositoryContract` class
 ## Tomorrow's Plan
+- Make statistic class
