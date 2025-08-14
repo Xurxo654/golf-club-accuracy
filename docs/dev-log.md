@@ -1,8 +1,8 @@
 # Development Log: Golf Club Accuracy
 ## Quick Reference
 - **Current Version:** v0.1
-- **Current Focus:** Setting up Project
-- **Next Major Milestone:** Baseline Project Initialized
+- **Current Focus:** Making statistics
+- **Next Major Milestone:** Complete statistics
 - **Started:** 2025-08-12
 ---
 # 2025-08-12: Project Kickoff
@@ -29,3 +29,13 @@
 - see `ShotRepositoryContract` class
 ## Tomorrow's Plan
 - Make statistic class
+---
+# 2025-08-13: Statistics
+## Today's Goals
+- Set up Statistics
+## Progress
+- Created `calcDispersion` to create a map of the percentage of shots by `ShotResult`
+## Lessons Learned
+- Identifying tests can ensure code has appropriate behavior
+## Tomorrow's Plan
+- add more statistics
