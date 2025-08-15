@@ -1,8 +1,8 @@
 # Development Log: Golf Club Accuracy
 ## Quick Reference
 - **Current Version:** v0.1
-- **Current Focus:** Making statistics
-- **Next Major Milestone:** Complete statistics
+- **Current Focus:** Console App
+- **Next Major Milestone:** Complete Console App
 - **Started:** 2025-08-12
 ---
 # 2025-08-12: Project Kickoff
@@ -39,3 +39,22 @@
 - Identifying tests can ensure code has appropriate behavior
 ## Tomorrow's Plan
 - add more statistics
+---
+# 2025-08-15:
+## Today's Goals
+- Statistics by club
+- Start CLI
+## Progress
+- basic statistics completed
+- `ConsoleApp` created
+- `ConsoleApp` passes initial tests
+### Test Created
+- `console app prompts for command when started`
+- `console app should accept quit command`
+- `console app should handle invalid command`
+## Tomorrow's Plan
+- Define expectations for adding a shot with `ConsoleApp`
+  - What does the command look like?
+  - What does the response look like?
+- Write test for adding club
+- Implement adding club
