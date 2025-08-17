@@ -58,3 +58,32 @@
   - What does the response look like?
 - Write test for adding club
 - Implement adding club
+---
+# 2025-08
+## Today's Goals
+- Decide on the process for adding clubs
+- implement method to add shots via console app
+- make console app continue to run until exit command is received
+## Decisions Made
+- add shot command will launch a second function to capture details
+- Make test extension to reduce code writing for console tests
+## Challenges
+- Difficulty getting shot enum from `readln()`
+  - created method on enum class
+  - Issue turned out to be that I did not declare the enum correctly. I didn't have `val` in front of the variable in the constructor so it never became a property of the enum.
+## Progress
+- made companion object on enums to hand finding by their property names
+- Created `ConsoleTestExtension` to simplify console testing
+- Refactored tests to utilize `ConsoleTestExtension`
+- Created `addShot()` method in `ConsoleApp` 
+### Tests Created
+- `console app should have add shot command`
+- `add shot command should request club data`
+- `add shot command should request result data`
+- `add shot command should complete successfully`
+- `add shot should error on invalid club`
+- `add shot command should request club again after invalid club`
+- `add shot should error on invalid result`
+- `add shot command should request result again after invalid result`
+## Tomorrow's Plan
+- implement loop to continue to prompt for commands until app is exited
