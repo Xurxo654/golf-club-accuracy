@@ -124,7 +124,8 @@ class ConsoleAppTests {
 
             val output = outputStream.toString()
 
-            assertTrue(output.contains("Shot added"))
+            assertTrue(output.contains("Select Club:"))
+            assertTrue(output.contains("Select Result:"))
 
         } finally {
             System.setIn(originalIn)
@@ -134,7 +135,33 @@ class ConsoleAppTests {
 
     @Test
     fun `console app add shot should error on invalid club`() {
-        val input = "dne\n10w"
+        val input = "shoot\n10w"
+        val inputStream = ByteArrayInputStream(input.toByteArray())
+        val originalIn = System.`in`
+
+        val errorStream = ByteArrayOutputStream()
+        val originalErr = System.err
+
+        try {
+            System.setIn(inputStream)
+            System.setErr(PrintStream(errorStream))
+
+            val app = ConsoleApp()
+            app.run()
+
+            val output = errorStream.toString()
+
+            assertTrue(output.contains("Invalid club: 10w"))
+
+        } finally {
+            System.setIn(originalIn)
+            System.setErr(originalErr)
+        }
+    }
+
+    @Test
+    fun `console app add shot should error on invalid result`() {
+        val input = "shoot\nDriver\nRight Left\n"
         val inputStream = ByteArrayInputStream(input.toByteArray())
         val originalIn = System.`in`
 
