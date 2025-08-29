@@ -1,10 +1,11 @@
 class ConsoleApp {
     fun run() {
-        println("Welcome to Golf Club Accuracy\nEnter Command:")
+        println("Welcome to Golf Club Accuracy")
         parseCommand()
     }
 
     private fun parseCommand() {
+        println("Enter command:")
         val command = readlnOrNull() ?: return
         when (command) {
             "quit" -> println("Exiting Application")
@@ -37,5 +38,6 @@ class ConsoleApp {
             }
         }
         println("Shot added")
+        parseCommand()
     }
 }

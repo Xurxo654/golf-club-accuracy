@@ -87,4 +87,12 @@ class ConsoleAppTests {
         val selectClubCount = console.getOutput().split("Select Result:").size - 1
         assertEquals(selectClubCount, 2)
     }
+
+    @Test
+    fun `should prompt for new command after shot added`(console: ConsoleCapture) {
+        console.setInput("shoot\n3 wood\nOn target\nquit\n")
+        ConsoleApp().run()
+        val enterCommandCount = console.getOutput().split("Enter command:").size - 1
+        assertEquals(2, enterCommandCount)
+    }
 }
