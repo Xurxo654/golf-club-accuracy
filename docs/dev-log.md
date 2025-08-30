@@ -59,7 +59,7 @@
 - Write test for adding club
 - Implement adding club
 ---
-# 2025-08
+# 2025-08-17
 ## Today's Goals
 - Decide on the process for adding clubs
 - implement method to add shots via console app
@@ -87,3 +87,12 @@
 - `add shot command should request result again after invalid result`
 ## Tomorrow's Plan
 - implement loop to continue to prompt for commands until app is exited
+# 2025-08-29
+## Today's goals
+- make add shot return to main prompt when completed.
+## Progress
+- Added prompt command to the end of addShot() to loop back to start after shot added.
+- Tested loop
+## Tomorrow's Plan
+- add repository to console app
+- save shots to repository
